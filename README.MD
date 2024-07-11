@@ -1,25 +1,6 @@
 # Why?
 Many great best practices floating around internet and many of then didn't provide RSS feed so I can't bookmark it via feedly. And even worse some link is manual hosting and wait for it expired then I decide to replicate them here.
 
-```mermaid
-sequenceDiagram
-    participant Dashboard
-    participant MariaDB
-    participant NetworkFolders
-    participant User
-    participant EmailService
-
-    User->>Dashboard: Request Dashboard Form
-    Dashboard->>MariaDB: Fetch HTML Containers
-    MariaDB-->>Dashboard: Return HTML Containers
-    Dashboard->>Dashboard: Build Dashboard with HTML Containers
-    Dashboard-->>User: Serve Dashboard Form
-    User->>NetworkFolders: Fetch Graphs for Dashboard Form
-    NetworkFolders-->>User: Return Graphs
-    User->>Dashboard: Submit Dashboard Form
-    Dashboard->>Dashboard: Build Email with Dashboard Form
-    Dashboard->>Email Recipient List: Send Built Email
-```
 
 ## TLDR
 It's a backup of best practices I like.
